@@ -94,28 +94,4 @@
   window.addEventListener('scroll', markActive, { passive: true });
   markActive();
 
-  /* ---- tile-grid US map ---- */
-  // [abbr, row, col]
-  var TILES = [
-    ['AK',1,1],['ME',1,11],
-    ['VT',2,10],['NH',2,11],
-    ['WA',3,1],['ID',3,2],['MT',3,3],['ND',3,4],['MN',3,5],['WI',3,7],['MI',3,8],['NY',3,9],['MA',3,10],
-    ['OR',4,1],['NV',4,2],['WY',4,3],['SD',4,4],['IA',4,5],['IL',4,6],['IN',4,7],['OH',4,8],['PA',4,9],['NJ',4,10],['CT',4,11],
-    ['CA',5,1],['UT',5,2],['CO',5,3],['NE',5,4],['MO',5,5],['KY',5,6],['WV',5,7],['VA',5,8],['MD',5,9],['DE',5,10],['RI',5,11],
-    ['AZ',6,2],['NM',6,3],['KS',6,4],['AR',6,5],['TN',6,6],['NC',6,7],['SC',6,8],['DC',6,9],
-    ['OK',7,4],['LA',7,5],['MS',7,6],['AL',7,7],['GA',7,8],
-    ['HI',8,1],['TX',8,4],['FL',8,9]
-  ];
-  var OWNED = {CA:1,NV:1,AZ:1,UT:1,CO:1,WY:1,MT:1,ND:1,NM:1,TX:1,OK:1,KS:1,AR:1,LA:1,MS:1,AL:1,TN:1,KY:1,WV:1,VA:1,SC:1};
-  var map = document.getElementById('usmap');
-  if (map) {
-    TILES.forEach(function (t) {
-      var b = document.createElement('b');
-      b.textContent = t[0];
-      b.style.gridRow = t[1];
-      b.style.gridColumn = t[2];
-      if (OWNED[t[0]]) { b.className = 'on'; b.title = t[0] + ': Cannon Field interests'; }
-      map.appendChild(b);
-    });
-  }
 })();
