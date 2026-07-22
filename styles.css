@@ -94,16 +94,22 @@ a{color:inherit;text-decoration:none}
 .nav__toggle span{width:26px;height:2px;background:var(--charcoal);transition:.3s var(--ease)}
 
 /* ============================ HERO ============================ */
-.hero{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden;
-  background:linear-gradient(150deg,#2E2F31 0%,#39472e 42%,var(--green-deep) 100%);}
-.hero__map{position:absolute;inset:0;opacity:.13;display:flex;align-items:center;justify-content:flex-end;padding-right:2vw}
-.hero__map svg{width:min(760px,64vw);height:auto}
-.hero__overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(46,47,49,.55) 0%,rgba(46,47,49,.1) 65%,transparent 100%)}
+.hero{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden;background:#24261f}
+.hero__scene{position:absolute;inset:0;animation:kb 22s ease-in-out infinite alternate;transform-origin:64% 60%}
+.hero__scene svg{width:100%;height:100%;display:block}
+@keyframes kb{from{transform:scale(1.06)}to{transform:scale(1.18) translateY(-2%)}}
+.hero__cloud{animation:drift 52s linear infinite}
+.hero__cloud--2{animation:drift 74s linear infinite}
+@keyframes drift{from{transform:translateX(-360px)}to{transform:translateX(1620px)}}
+.hero__overlay{position:absolute;inset:0;background:
+  linear-gradient(90deg,rgba(30,32,25,.82) 0%,rgba(30,32,25,.3) 58%,transparent 100%),
+  linear-gradient(0deg,rgba(30,32,25,.55) 0%,transparent 42%)}
 .hero__content{position:relative;z-index:2;max-width:var(--maxw);margin:0 auto;padding:110px 28px 0;width:100%}
 .hero__eyebrow{color:rgba(255,255,255,.72);text-transform:uppercase;letter-spacing:.22em;font-size:.82rem;font-weight:700;margin-bottom:22px}
-.hero__title{color:#fff;font-weight:700;font-size:clamp(2.3rem,5.4vw,4rem);line-height:1.05;letter-spacing:-.015em;max-width:16ch}
+.hero__title{color:#fff;font-weight:700;font-size:clamp(2.3rem,5.4vw,4rem);line-height:1.05;letter-spacing:-.015em;max-width:16ch;text-shadow:0 2px 28px rgba(0,0,0,.38)}
 .hero__title em{font-style:normal;color:var(--green)}
-.hero__sub{color:rgba(255,255,255,.85);font-size:1.18rem;max-width:52ch;margin-top:24px}
+.hero__sub{color:rgba(255,255,255,.88);font-size:1.18rem;max-width:52ch;margin-top:24px;text-shadow:0 1px 14px rgba(0,0,0,.35)}
+@media (prefers-reduced-motion: reduce){.hero__scene,.hero__cloud,.hero__cloud--2{animation:none}}
 .hero__tag{margin-top:26px;color:#fff;font-style:italic;font-weight:600;font-size:1.05rem;opacity:.9}
 .hero__actions{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
 .hero__scroll{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);z-index:2;

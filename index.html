@@ -13,7 +13,7 @@
 <meta property="og:description" content="We purchase mineral rights and working interests with proprietary analytics, the highest defensible valuations, and a fast, transparent close." />
 <meta property="og:url" content="https://cannonfield.com/" />
 
-<link rel="stylesheet" href="styles.css?v=20260722c" />
+<link rel="stylesheet" href="styles.css?v=20260722e" />
 
 <!-- ============================ HEADER ============================ -->
 <header class="nav" id="nav">
@@ -36,13 +36,34 @@
 
 <!-- ============================ HERO ============================ -->
 <section class="hero" id="top">
-  <div class="hero__map" aria-hidden="true">
-    <svg viewBox="0 0 300 340" xmlns="http://www.w3.org/2000/svg">
-      <path d="M150 20 L280 320 L20 320 Z" fill="#ffffff"/>
-      <g stroke="#2E2F31" stroke-width="3" fill="none" stroke-linejoin="round" opacity=".9">
-        <path d="M150 44 L150 320"/><path d="M150 44 L70 320"/><path d="M150 44 L230 320"/>
-        <path d="M124 150 L176 150"/><path d="M108 210 L192 210"/><path d="M88 272 L212 272"/>
+  <div class="hero__scene" aria-hidden="true">
+    <svg viewBox="0 0 1440 900" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <linearGradient id="cfSky" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#24261f"/><stop offset="50%" stop-color="#3d4a2c"/>
+          <stop offset="80%" stop-color="#7c8544"/><stop offset="100%" stop-color="#bcae5f"/>
+        </linearGradient>
+        <radialGradient id="cfSun" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#fbf1c4" stop-opacity=".95"/>
+          <stop offset="45%" stop-color="#eac86c" stop-opacity=".5"/>
+          <stop offset="100%" stop-color="#eac86c" stop-opacity="0"/>
+        </radialGradient>
+        <filter id="cfGrain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+        <filter id="cfSoft"><feGaussianBlur stdDeviation="20"/></filter>
+      </defs>
+      <rect x="0" y="0" width="1440" height="900" fill="url(#cfSky)"/>
+      <circle cx="930" cy="470" r="230" fill="url(#cfSun)"/>
+      <circle cx="930" cy="472" r="46" fill="#fdf4d0" opacity=".92"/>
+      <ellipse class="hero__cloud" cx="300" cy="250" rx="340" ry="34" fill="rgba(255,255,255,.07)" filter="url(#cfSoft)"/>
+      <ellipse class="hero__cloud hero__cloud--2" cx="1000" cy="180" rx="280" ry="26" fill="rgba(255,255,255,.05)" filter="url(#cfSoft)"/>
+      <path d="M0,520 C320,486 640,528 940,500 C1140,482 1320,512 1440,522 L1440,900 L0,900Z" fill="#5c6a38"/>
+      <path d="M0,600 C380,558 740,622 1060,582 C1250,558 1370,598 1440,608 L1440,900 L0,900Z" fill="#41512a"/>
+      <g transform="translate(1104,586)" fill="#1e261a">
+        <path d="M0,0 L20,-88 L40,0 Z"/>
+        <g stroke="#33421f" stroke-width="2.4" fill="none"><path d="M20,-82 L20,0"/><path d="M9,-40 L31,-40"/><path d="M5,-16 L35,-16"/></g>
       </g>
+      <path d="M0,700 C420,658 780,714 1140,672 C1310,652 1390,692 1440,704 L1440,900 L0,900Z" fill="#2b3620"/>
+      <rect x="0" y="0" width="1440" height="900" fill="#8a8f4e" filter="url(#cfGrain)" opacity=".05"/>
     </svg>
   </div>
   <div class="hero__overlay"></div>
