@@ -116,6 +116,7 @@ a{color:inherit;text-decoration:none}
 .hero__eyebrow{color:rgba(255,255,255,.72);text-transform:uppercase;letter-spacing:.22em;font-size:.82rem;font-weight:700;margin-bottom:22px}
 .hero__title{color:#fff;font-weight:700;font-size:clamp(2.3rem,5.4vw,4rem);line-height:1.05;letter-spacing:-.015em;max-width:16ch;text-shadow:0 2px 28px rgba(0,0,0,.38)}
 .hero__title em{font-style:normal;color:var(--green)}
+.hero__title--name{text-transform:uppercase;letter-spacing:.03em;font-weight:700;font-size:clamp(3rem,7.4vw,5.6rem);line-height:1.0;max-width:14ch}
 .hero__sub{color:rgba(255,255,255,.88);font-size:1.18rem;max-width:52ch;margin-top:24px;text-shadow:0 1px 14px rgba(0,0,0,.35)}
 @media (prefers-reduced-motion: reduce){.hero__scene,.hero__cloud,.hero__cloud--2{animation:none}}
 .hero__tag{margin-top:26px;color:#fff;font-style:italic;font-weight:600;font-size:1.05rem;opacity:.9}
