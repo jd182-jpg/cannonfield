@@ -68,16 +68,21 @@ a{color:inherit;text-decoration:none}
 
 /* ============================ NAV ============================ */
 .nav{
-  position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.96);
-  backdrop-filter:saturate(140%) blur(6px);
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:linear-gradient(180deg,rgba(30,32,25,.62) 0%,rgba(30,32,25,.18) 55%,transparent 100%);
   border-bottom:1px solid transparent;
-  transition:box-shadow .4s var(--ease),padding .4s var(--ease),border-color .4s;
+  transition:background .4s var(--ease),backdrop-filter .4s var(--ease),box-shadow .4s var(--ease),padding .4s var(--ease),border-color .4s;
   padding:16px 0;
 }
-.nav.scrolled{box-shadow:0 6px 26px -18px rgba(46,47,49,.5);border-bottom-color:var(--line);padding:10px 0}
+.nav.scrolled{
+  background:rgba(255,255,255,.96);backdrop-filter:saturate(140%) blur(6px);
+  box-shadow:0 6px 26px -18px rgba(46,47,49,.5);border-bottom-color:var(--line);padding:10px 0;
+}
 .nav__inner{max-width:var(--maxw);margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between}
-.nav__logo{height:44px;width:auto;transition:height .4s var(--ease)}
+.nav__logo{height:44px;width:auto;transition:height .4s var(--ease),filter .4s var(--ease)}
 .nav.scrolled .nav__logo{height:38px}
+/* transparent-over-hero (top) state: white logo + links so the bar blends into the hero */
+.nav:not(.scrolled) .nav__logo{filter:brightness(0) invert(1)}
 .nav__links{display:flex;align-items:center;gap:30px}
 .nav__links a{
   position:relative;text-transform:uppercase;letter-spacing:.09em;font-size:.86rem;font-weight:600;
@@ -85,6 +90,8 @@ a{color:inherit;text-decoration:none}
 }
 .nav__links a:hover,.nav__links a.is-current{color:var(--green-deep)}
 .nav__links a.is-current::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--green);border-radius:2px}
+.nav:not(.scrolled) .nav__links a{color:rgba(255,255,255,.9)}
+.nav:not(.scrolled) .nav__links a:hover,.nav:not(.scrolled) .nav__links a.is-current{color:#fff}
 .nav__cta{
   background:var(--green-deep);color:#fff !important;padding:9px 20px;border-radius:3px;letter-spacing:.09em;
 }
@@ -92,6 +99,7 @@ a{color:inherit;text-decoration:none}
 .nav__cta:hover{background:var(--green-dark)}
 .nav__toggle{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}
 .nav__toggle span{width:26px;height:2px;background:var(--charcoal);transition:.3s var(--ease)}
+.nav:not(.scrolled) .nav__toggle span{background:#fff}
 
 /* ============================ HERO ============================ */
 .hero{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden;background:#24261f}
@@ -250,6 +258,10 @@ a{color:inherit;text-decoration:none}
     flex-direction:column;justify-content:center;gap:26px;transform:translateX(100%);
     transition:transform .4s var(--ease);padding:40px;box-shadow:-20px 0 50px -30px rgba(0,0,0,.4)}
   .nav__links.open{transform:none}
+  /* slide-in panel is white: keep its links + the open X dark even over the hero */
+  .nav:not(.scrolled) .nav__links a{color:var(--slate)}
+  .nav:not(.scrolled) .nav__links a.nav__cta{color:#fff}
+  .nav.menu-open:not(.scrolled) .nav__toggle span{background:var(--charcoal)}
   .nav__toggle{display:flex;z-index:110}
   .nav.menu-open .nav__toggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
   .nav.menu-open .nav__toggle span:nth-child(2){opacity:0}
