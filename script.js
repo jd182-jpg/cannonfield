@@ -95,3 +95,13 @@
   markActive();
 
 })();
+
+
+/* pause hero pumpjack (SMIL) animation when the user prefers reduced motion */
+(function(){
+  try{
+    if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches){
+      document.querySelectorAll('.hero__scene svg').forEach(function(svg){ if (svg.pauseAnimations) svg.pauseAnimations(); });
+    }
+  }catch(e){}
+})();
