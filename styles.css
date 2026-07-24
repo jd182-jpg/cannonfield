@@ -114,6 +114,8 @@ a{color:inherit;text-decoration:none}
   linear-gradient(0deg,rgba(30,32,25,.55) 0%,transparent 42%)}
 .hero__content{position:relative;z-index:2;max-width:var(--maxw);margin:0 auto;padding:110px 28px 0;width:100%}
 .hero__eyebrow{color:rgba(255,255,255,.72);text-transform:uppercase;letter-spacing:.22em;font-size:.82rem;font-weight:700;margin-bottom:22px}
+.hero__affil{color:inherit;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.38);padding-bottom:2px;transition:color .2s,border-color .2s}
+.hero__affil:hover{color:#fff;border-color:#fff}
 .hero__title{color:#fff;font-weight:700;font-size:clamp(2.3rem,5.4vw,4rem);line-height:1.05;letter-spacing:-.015em;max-width:16ch;text-shadow:0 2px 28px rgba(0,0,0,.38)}
 .hero__title em{font-style:normal;color:var(--green)}
 .hero__title--name{text-transform:uppercase;letter-spacing:.03em;font-weight:700;font-size:clamp(3rem,7.4vw,5.6rem);line-height:1.0;max-width:14ch}
@@ -227,6 +229,8 @@ a{color:inherit;text-decoration:none}
 .footer__word .mark{width:20px;height:26px;margin:0 1px}
 .footer__brand p{color:rgba(255,255,255,.6);font-size:.94rem}
 .footer__brand .tag{color:var(--green);font-style:italic;font-weight:600;margin-top:10px;display:block}
+.footer__brand .tag a{color:inherit;text-decoration:underline;text-underline-offset:2px}
+.footer__brand .tag a:hover{color:#fff}
 .footer__nav{display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start}
 .footer__nav a{text-transform:uppercase;letter-spacing:.1em;font-size:.84rem;font-weight:600;color:rgba(255,255,255,.75)}
 .footer__nav a:hover{color:var(--green)}

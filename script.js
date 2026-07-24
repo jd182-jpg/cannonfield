@@ -75,7 +75,7 @@
   }
 
   /* ---- active nav link on scroll ---- */
-  var sections = ['footprint', 'affiliates', 'why', 'contact'];
+  var sections = ['footprint', 'affiliates', 'contact'];
   var navAnchors = {};
   links && links.querySelectorAll('a').forEach(function (a) {
     var href = a.getAttribute('href') || '';
