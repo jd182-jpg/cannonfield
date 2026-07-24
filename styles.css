@@ -193,6 +193,8 @@ a{color:inherit;text-decoration:none}
 
 /* ---- affiliates / entities ---- */
 .ent{display:flex;flex-wrap:wrap;gap:20px;justify-content:center}
+.ent--ops{margin-top:22px}
+.ent__flag{font-weight:600;font-style:italic;color:var(--muted);font-size:.82em}
 .ent__card{width:220px;display:flex;flex-direction:column;align-items:center;gap:14px}
 .ent__chip{width:100%;height:120px;background:#fff;border:1px solid var(--line);border-radius:10px;
   display:flex;align-items:center;justify-content:center;padding:22px;
